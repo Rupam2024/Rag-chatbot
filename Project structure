@@ -1,0 +1,32 @@
+Drug-RAG-Assistant/
+│
+├── app.py
+├── config.py
+├── requirements.txt
+│
+├── data/
+│   └── testnlem.csv
+│
+├── vectorstore/
+│   ├── ingest.py
+│   └── retriever.py
+│
+├── llm/
+│   ├── ollama_client.py
+│   └── router.py
+│
+├── analytics/
+│   └── dashboard.py
+│
+├── database/
+│   └── sqlite_db.py
+│
+├── reports/
+│   └── pdf_generator.py
+│
+├── admin/
+│   └── upload_data.py
+│
+├── chroma_db/
+│
+└── query_logs.db
