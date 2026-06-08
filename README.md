@@ -50,57 +50,6 @@ Answer      Ollama LLM
       MySQL
 ```
 
----
-
-## 📂 Project Structure
-
-```text
-Drug-RAG-Assistant/
-│
-├── app.py
-├── config.py
-├── requirements.txt
-│
-├── data/
-│   └── testnlem.csv
-│
-├── admin/
-│   ├── __init__.py
-│   └── upload_data.py
-│
-├── analytics/
-│   ├── __init__.py
-│   └── dashboard.py
-│
-├── database/
-│   ├── __init__.py
-│   └── mysql_db.py
-│
-├── llm/
-│   ├── __init__.py
-│   ├── ollama_client.py
-│   └── router.py
-│
-├── reports/
-│   ├── __init__.py
-│   └── pdf_generator.py
-│
-├── utils/
-│   ├── __init__.py
-│   ├── logger.py
-│   └── exact_search.py
-│
-├── vectorstore/
-│   ├── __init__.py
-│   ├── ingest.py
-│   └── retriever.py
-│
-├── chroma_db/
-├── logs/
-└── generated_reports/
-```
-
----
 
 ## 🛠️ Technologies Used
 
