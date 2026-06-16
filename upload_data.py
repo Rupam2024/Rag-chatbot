@@ -11,9 +11,7 @@ from config import (
 # Import your ingest function
 from vectorstore.ingest import main as rebuild_vector_db
 
-# ==========================================
 # Save Uploaded File
-# ==========================================
 
 def save_uploaded_file(uploaded_file):
 
@@ -63,9 +61,7 @@ def validate_csv(file_path):
 
         return False, str(e)
 
-# ==========================================
 # Replace Existing Dataset
-# ==========================================
 
 def replace_dataset(new_file_path):
 
@@ -86,9 +82,7 @@ def replace_dataset(new_file_path):
 
         return False
 
-# ==========================================
 # Rebuild ChromaDB
-# ==========================================
 
 def rebuild_database():
 
@@ -106,9 +100,7 @@ def rebuild_database():
 
         return False
 
-# ==========================================
 # Dataset Summary
-# ==========================================
 
 def show_dataset_summary(df):
 
@@ -138,9 +130,7 @@ def show_dataset_summary(df):
         use_container_width=True
     )
 
-# ==========================================
 # Main Upload Page
-# ==========================================
 
 def render_upload_page():
 
@@ -209,9 +199,7 @@ def render_upload_page():
                     "Vector Database Rebuilt Successfully"
                 )
 
-# ==========================================
 # Standalone Testing
-# ==========================================
 
 if __name__ == "__main__":
 
