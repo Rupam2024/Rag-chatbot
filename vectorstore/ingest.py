@@ -53,6 +53,52 @@ def clean_dataset(df):
 
     return df
 
+def create_documents(df):
+    """
+    Convert rows into LangChain Documents.
+    """
+
+    documents = []
+
+    for _, row in df.iterrows():
+
+        content = f"""
+SKU: {row.get('SKU', '')}
+
+Company: {row.get('Company', '')}
+
+Category: {row.get('Sub Group', '')}
+
+Composition: {row.get('Composition', '')}
+
+Strength: {row.get('Strength', '')}
+
+MRP: {row.get('MRP', '')}
+
+Brand: {row.get('Brand', '')}
+"""
+
+        metadata = {
+    "sku": str(row.get("SKU", "")),
+    "company": str(row.get("Company", "")),
+    "category": str(row.get("Sub Group", "")),
+    "composition": str(row.get("Composition", "")),
+    "strength": str(row.get("Strength", "")),
+    "mrp": str(row.get("MRP", "")),
+    "brand": str(row.get("Brand", ""))
+}
+
+        documents.append(
+            Document(
+                page_content=content,
+                metadata=metadata
+            )
+        )
+
+    print(f" Documents Created: {len(documents)}")
+
+    return documents
+
 
 
 
