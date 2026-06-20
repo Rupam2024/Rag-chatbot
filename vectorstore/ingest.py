@@ -32,4 +32,27 @@ def load_dataset(csv_path):
         print(f" Error loading dataset: {e}")
         raise
 
+def clean_dataset(df):
+    """
+    Clean and preprocess dataset.
+    """
+
+    df = df.copy()
+
+    # Remove duplicates
+    df = df.drop_duplicates()
+
+    # Fill NaN values
+    df = df.fillna("Not Available")
+
+    # Convert all columns to string
+    for col in df.columns:
+        df[col] = df[col].astype(str)
+
+    print(f" Cleaned Records: {len(df)}")
+
+    return df
+
+
+
 
