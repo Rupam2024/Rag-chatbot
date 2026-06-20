@@ -99,6 +99,39 @@ Brand: {row.get('Brand', '')}
 
     return documents
 
+def get_embeddings():
 
+    embeddings = HuggingFaceEmbeddings(
+        model_name=EMBEDDING_MODEL
+    )
+
+    return embeddings
+
+
+# Build ChromaDB
+
+def build_vector_database(documents):
+
+    if os.path.exists(CHROMA_DB_PATH):
+
+        import shutil
+
+        print("Removing old vector database...")
+
+        shutil.rmtree(CHROMA_DB_PATH)
+
+    embeddings = get_embeddings()
+
+    print("Creating vector embeddings...")
+
+    vector_db = Chroma.from_documents(
+        documents=documents,
+        embedding=embeddings,
+        persist_directory=CHROMA_DB_PATH
+    )
+
+    print("ChromaDB Created Successfully")
+
+    return vector_db
 
 
