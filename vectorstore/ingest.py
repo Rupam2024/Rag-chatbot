@@ -135,6 +135,25 @@ def build_vector_database(documents):
     return vector_db
 
 
+def main():
+
+    print("=" * 50)
+    print("DRUG RAG VECTOR DATABASE BUILDER")
+    print("=" * 50)
+
+    df = load_dataset(CSV_PATH)
+
+    df = clean_dataset(df)
+
+    documents = create_documents(df)
+
+    build_vector_database(documents)
+
+    print("\n Vector Database Ready!")
+    print(" Stored in:", CHROMA_DB_PATH)
+
+
+
 
 
 
