@@ -135,11 +135,6 @@ def build_vector_database(documents):
     return vector_db
 
 
-def main():
-
-    print("=" * 50)
-    print("DRUG RAG VECTOR DATABASE BUILDER")
-    print("=" * 50)
 
 
 
