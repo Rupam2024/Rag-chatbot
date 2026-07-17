@@ -1,15 +1,11 @@
 from langchain_ollama import OllamaLLM
 import time
 
-# ----------------------------------
 # Configuration
-# ----------------------------------
 
 MODEL_NAME = "llama3"
 
-# ----------------------------------
 # Load Model
-# ----------------------------------
 
 class OllamaClient:
 
@@ -20,9 +16,9 @@ class OllamaClient:
             temperature=0.2
         )
 
-    # ----------------------------------
+    
     # Basic Generation
-    # ----------------------------------
+    
 
     def generate(
         self,
@@ -43,9 +39,9 @@ class OllamaClient:
                 f"Error generating response: {str(e)}"
             )
 
-    # ----------------------------------
+    
     # Generation with Timing
-    # ----------------------------------
+    
 
     def generate_with_metrics(
         self,
@@ -77,9 +73,9 @@ class OllamaClient:
                 "response_time": 0
             }
 
-    # ----------------------------------
+    
     # Fallback LLM Answer
-    # ----------------------------------
+    
 
     def fallback_answer(
         self,
@@ -107,9 +103,9 @@ Answer:
             prompt
         )
 
-    # ----------------------------------
+    
     # RAG-Based Answer
-    # ----------------------------------
+    
 
     def rag_answer(
         self,
@@ -142,9 +138,9 @@ ANSWER:
             prompt
         )
 
-    # ----------------------------------
+    
     # Hybrid RAG Answer
-    # ----------------------------------
+    
 
     def hybrid_answer(
         self,
@@ -181,9 +177,9 @@ FINAL ANSWER:
             prompt
         )
 
-    # ----------------------------------
+    
     # Drug Comparison
-    # ----------------------------------
+    
 
     def compare_drugs(
         self,
@@ -214,9 +210,9 @@ Provide comparison in:
             prompt
         )
 
-    # ----------------------------------
+    
     # Drug Report Summary
-    # ----------------------------------
+   
 
     def generate_report_summary(
         self,
@@ -245,15 +241,15 @@ Generate:
         )
 
 
-# ----------------------------------
+
 # Singleton Instance
-# ----------------------------------
+
 
 client = OllamaClient()
 
-# ----------------------------------
+
 # Helper Functions
-# ----------------------------------
+
 
 def generate_response(
     prompt
@@ -315,9 +311,8 @@ def report_summary(
     )
 
 
-# ----------------------------------
+
 # Test
-# ----------------------------------
 
 if __name__ == "__main__":
 
