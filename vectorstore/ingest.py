@@ -152,7 +152,8 @@ def main():
     print("\n Vector Database Ready!")
     print(" Stored in:", CHROMA_DB_PATH)
 
-
+if __name__ == "__main__":
+    main()
 
 
 
