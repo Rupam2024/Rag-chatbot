@@ -190,9 +190,8 @@ def route_general(query):
 
 def process_query(query):
 
-    # ---------------------------------
+
     # EXACT PRODUCT SEARCH
-    # ---------------------------------
 
     sku_query = extract_possible_sku(
         query
@@ -260,7 +259,7 @@ Category: {source.get('category')}
 
 Strength: {source.get('strength')}
 
-----------------------------------------
+
 """
 
     return text
