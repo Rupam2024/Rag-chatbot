@@ -15,3 +15,16 @@ def load_embeddings():
     )
 
     return embeddings
+
+# Load Vector Database
+
+def load_vector_db():
+
+    embeddings = load_embeddings()
+
+    vector_db = Chroma(
+        persist_directory=CHROMA_DB_PATH,
+        embedding_function=embeddings
+    )
+
+    return vector_db
