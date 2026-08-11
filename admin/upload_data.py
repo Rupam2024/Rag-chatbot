@@ -41,9 +41,7 @@ def save_uploaded_file(uploaded_file):
 
         return None
 
-# ==========================================
 # Validate CSV
-# ==========================================
 
 def validate_csv(file_path):
 
