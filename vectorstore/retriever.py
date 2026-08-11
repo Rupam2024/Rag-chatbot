@@ -28,3 +28,21 @@ def load_vector_db():
     )
 
     return vector_db
+
+
+def semantic_search(
+    query,
+    top_k=5
+):
+    """
+    Perform similarity search.
+    """
+
+    db = load_vector_db()
+
+    results = db.similarity_search(
+        query=query,
+        k=top_k
+    )
+
+    return results
