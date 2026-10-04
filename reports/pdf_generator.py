@@ -91,3 +91,27 @@ class PDFGenerator:
         sources,
         output_file
     ):
+
+        doc = SimpleDocTemplate(
+            output_file
+        )
+
+        elements = []
+
+        elements.append(
+            Paragraph(
+                "AI Drug Assistant Report",
+                self.styles["Title"]
+            )
+        )
+
+        elements.append(
+            Spacer(1, 15)
+        )
+
+        elements.append(
+            Paragraph(
+                f"<b>Question:</b> {question}",
+                self.styles["BodyText"]
+            )
+        )
