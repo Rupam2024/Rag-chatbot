@@ -14,6 +14,7 @@ from reportlab.lib import colors
 from datetime import datetime
 import os
 
+
 # PDF Generator
 
 class PDFGenerator:
@@ -23,7 +24,6 @@ class PDFGenerator:
         self.styles = getSampleStyleSheet()
 
     # Create Single Drug Report
-    
 
     def create_drug_report(
         self,
@@ -47,6 +47,7 @@ class PDFGenerator:
         elements.append(
             Spacer(1, 12)
         )
+
         generated_time = Paragraph(
             f"Generated On: {datetime.now()}",
             self.styles["Normal"]
@@ -80,3 +81,13 @@ class PDFGenerator:
         doc.build(elements)
 
         return output_file
+
+    # AI Summary Report
+
+    def create_ai_summary_report(
+        self,
+        question,
+        answer,
+        sources,
+        output_file
+    ):
