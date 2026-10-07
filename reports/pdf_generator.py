@@ -115,3 +115,14 @@ class PDFGenerator:
                 self.styles["BodyText"]
             )
         )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+            Paragraph(
+                "<b>Answer</b>",
+                self.styles["Heading2"]
+            )
+        )
